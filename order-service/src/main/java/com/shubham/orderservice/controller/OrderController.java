@@ -17,7 +17,7 @@ public class OrderController {
 
     private final OrderService orderService;
     @PostMapping("/place")
-    public String placeOrder(@RequestBody OrderRequestDto orderRequestDto){
+    public String placeOrder(@RequestBody OrderRequestDto orderRequestDto) throws IllegalAccessException {
         orderService.placeOrder(orderRequestDto);
         return "Order placed successfully";
     }
